@@ -1,0 +1,833 @@
+/* ========================================
+   MY PROPERTIES COMPONENT STYLES
+   ======================================== */
+
+.myproperties-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  min-height: 100vh;
+  background-color: var(--gray-50);
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+.myproperties-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.6s ease;
+}
+
+.myproperties-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.25rem;
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.myproperties-subtitle {
+  font-size: 1rem;
+  color: var(--gray-600);
+}
+
+/* ========================================
+   FORM CONTAINER
+   ======================================== */
+
+.property-form {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 1.75rem;
+  animation: slideUp 0.6s ease;
+}
+
+.form-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-section-title svg {
+  color: var(--primary-main);
+}
+
+/* ========================================
+   FORM GROUPS
+   ======================================== */
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.form-label svg {
+  color: var(--primary-main);
+  width: 16px;
+  height: 16px;
+}
+
+.required {
+  color: var(--accent-red);
+  margin-left: 0.25rem;
+}
+
+/* ========================================
+   INPUT STYLES
+   ======================================== */
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all var(--transition-base);
+  background-color: var(--white);
+  color: var(--gray-800);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-main);
+  box-shadow: 0 0 0 4px rgba(45, 90, 160, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--gray-400);
+}
+
+/* Price Input with Unit Display */
+.price-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-input-wrapper .form-input {
+  flex: 1;
+}
+
+.price-unit-display {
+  padding: 0.65rem 1rem;
+  background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(45, 90, 160, 0.2);
+}
+
+/* ========================================
+   SELECT DROPDOWN
+   ======================================== */
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232d5aa0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 20px;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-select:hover {
+  border-color: var(--primary-main);
+}
+
+/* ========================================
+   MULTI-SELECT AMENITIES
+   ======================================== */
+
+.amenities-select {
+  min-height: 150px;
+  padding: 0.4rem;
+}
+
+.amenities-select option {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.amenities-select option:hover {
+  background-color: rgba(45, 90, 160, 0.1);
+}
+
+.amenities-select option:checked {
+  background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+  color: var(--white);
+  font-weight: 600;
+}
+
+.amenities-hint {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ========================================
+   IMAGE UPLOAD
+   ======================================== */
+
+.image-upload-wrapper {
+  margin-top: 0.5rem;
+}
+
+.image-input {
+  display: none;
+}
+
+.image-upload-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 12px rgba(45, 90, 160, 0.3);
+}
+
+.image-upload-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(45, 90, 160, 0.4);
+}
+
+.image-upload-label svg {
+  width: 18px;
+  height: 18px;
+  color: var(--white);
+}
+
+/* Image Preview */
+.image-preview-container {
+  margin-top: 1rem;
+  position: relative;
+  display: inline-block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  animation: fadeIn 0.4s ease;
+}
+
+.image-preview {
+  display: block;
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base);
+}
+
+.image-preview-container:hover .image-preview {
+  transform: scale(1.02);
+}
+
+.image-remove-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: var(--accent-red);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-remove-btn:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
+}
+
+/* ========================================
+   FORM ACTIONS
+   ======================================== */
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--gray-200);
+}
+
+.btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(45, 90, 160, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(45, 90, 160, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+}
+
+.btn-secondary:hover {
+  background-color: var(--gray-300);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ========================================
+   VALIDATION & ERROR STATES
+   ======================================== */
+
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  border-color: var(--accent-red);
+}
+
+.form-input.error:focus,
+.form-select.error:focus,
+.form-textarea.error:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  color: var(--accent-red);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.error-message svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Success State */
+.form-input.success,
+.form-select.success {
+  border-color: var(--accent-green);
+}
+
+.form-input.success:focus,
+.form-select.success:focus {
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .myproperties-container {
+    padding: 1rem;
+  }
+
+  .property-form {
+    padding: 1.5rem;
+  }
+
+  .myproperties-title {
+    font-size: 2rem;
+  }
+
+  .form-section-title {
+    font-size: 1.25rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .price-input-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .price-unit-display {
+    text-align: center;
+  }
+
+  .image-preview {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .myproperties-title {
+    font-size: 1.75rem;
+  }
+
+  .form-section-title {
+    font-size: 1.125rem;
+  }
+
+  .property-form {
+    padding: 1rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 0.75rem;
+  }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Properties Table Section */
+.properties-list-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.list-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Loading and Empty States */
+.loading-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+}
+
+.empty-state svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Table Responsive Wrapper */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Properties Table */
+.properties-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.properties-table thead {
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.properties-table th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.properties-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.properties-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.properties-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.properties-table td {
+  padding: 1rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* Table Property Image */
+.table-property-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+}
+
+.table-no-image {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+  color: #9ca3af;
+}
+
+/* Property Name Cell */
+.property-name-cell {
+  font-weight: 600;
+  color: #1f2937;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Property Type Badge */
+.property-type-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Price Cell */
+.price-cell {
+  font-weight: 600;
+  color: #059669;
+}
+
+.price-unit-small {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+
+/* Amenities List */
+.amenities-list {
+  display: flex;
+  align-items: center;
+}
+
+.amenities-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: #f3f4f6;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.no-amenities {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Table Actions */
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.table-action-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.table-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.edit-btn {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+.edit-btn:hover {
+  background: #bfdbfe;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+.delete-btn {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .properties-table {
+    font-size: 0.85rem;
+  }
+
+  .properties-table th,
+  .properties-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .table-property-image,
+  .table-no-image {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .properties-list-section {
+    padding: 1rem;
+  }
+
+  .table-responsive {
+    border: none;
+  }
+
+  /* Stack table for mobile */
+  .properties-table,
+  .properties-table thead,
+  .properties-table tbody,
+  .properties-table th,
+  .properties-table td,
+  .properties-table tr {
+    display: block;
+  }
+
+  .properties-table thead {
+    display: none;
+  }
+
+  .properties-table tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #ffffff;
+  }
+
+  .properties-table td {
+    padding: 0.5rem 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .properties-table td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    width: 100px;
+  }
+
+  .table-property-image,
+  .table-no-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .property-name-cell {
+    max-width: 100%;
+  }
+
+  .table-actions {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/* Additional styling for form when editing */
+.myproperties-title {
+  transition: color 0.3s;
+}
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Alert when editing */
+.editing-alert {
+  padding: 1rem;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #92400e;
+  font-weight: 500;
+}
