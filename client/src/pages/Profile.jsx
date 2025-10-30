@@ -303,7 +303,7 @@ const Profile = () => {
             <div className="form-group">
               <label>Account Type</label>
               <div className="role-badge">
-                {userData.role === 'owner' ? 'Owner' : 'None'}
+                {userData.role === 'owner' ? 'Owner' : userData.role === 'user' ? 'User' : 'Admin'}
               </div>
             </div>
 
