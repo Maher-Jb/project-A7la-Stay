@@ -4,7 +4,7 @@ import '../css/login.css'
 import { AppContent } from '../context/AppContext'
 import axios from 'axios'
 import {toast} from 'react-toastify'
-
+import { Eye, EyeOff } from 'lucide-react'
 const Login = () => {
 
 
@@ -147,7 +147,7 @@ const Login = () => {
                   className="password-toggle" 
                   onClick={togglePassword}
                 >
-                  {showPassword ? '🙈' : '👁'}
+                  {showPassword ? <Eye strokeWidth={2.5} size={20} /> : <EyeOff strokeWidth={2.5} size={20} />}
                 </button>
               </div>
               {/* Password strength indicator */}

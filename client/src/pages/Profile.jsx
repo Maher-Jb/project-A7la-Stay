@@ -165,9 +165,6 @@ const Profile = () => {
         setUserData(null)
         setIsLoggedin(false)
         
-        // Clear any stored tokens (if using localStorage/sessionStorage)
-        localStorage.removeItem('token')
-        
         // Redirect to home
         navigate('/')
       } else {
