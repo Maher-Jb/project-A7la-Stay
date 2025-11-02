@@ -73,8 +73,9 @@ const NavBar = () => {
           {/* Show links based on user role */}
           {userData && userData.role === "admin" && (
             <>
-              
+              <li><Link to="/Administration" className="nav-link">Administration</Link></li>
               <li><Link to="/profile" className="nav-link">Profile</Link></li>
+              
               
             </>
           )}

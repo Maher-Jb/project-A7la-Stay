@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   resetOtp : {type: String, default : ''},
   resetOtpExpiredAt : {type: Number, default : 0},
 
-})
+}, { timestamps: true })
 const userModel = mongoose.models.user || mongoose.model('user',userSchema)
 export default userModel
 // module.exports = mongoose.model('User', userSchema);     // export model

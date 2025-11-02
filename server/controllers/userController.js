@@ -144,4 +144,44 @@ const updateAccount = async (req, res) => {
   }
 }
 
-export { Userdata, deleteaccount, updateAccount }
+
+const GetAllUsers = async (req, res) => {
+  try {
+    const AllUsers = await userModel.find()
+    res.json({ success: true, message: "All users", users: AllUsers })
+  } catch (error) {
+    console.error("Error fetching users:", error)
+    res.status(500).json({ success: false, message: "Server error", error: error.message })
+  }
+}
+
+const DeleteUser = async (req, res) =>{
+  try {
+    
+  const { id } = req.params
+
+    const deleteduser = await userModel.findByIdAndDelete(id)
+
+    if (!deleteduser) {
+      return res.status(404).json({
+        success: false,
+        message: "user not found",
+      })
+    }
+    
+    res.status(200).json({
+      success: true,
+      message: "User deleted successfully!",
+      data: deleteduser,
+    })
+  } catch (error) {
+    console.error('Delete user error:', error)
+    res.status(500).json({
+      success: false,
+      message: error.message || "Failed to delete account",
+    })
+  }
+}
+
+
+export { Userdata, deleteaccount, updateAccount ,GetAllUsers, DeleteUser }

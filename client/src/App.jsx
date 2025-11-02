@@ -15,6 +15,7 @@ import BookingUser from './pages/BookingUser'
 import Myproperties from './pages/Myproperties'
 import MyBookers from './pages/MyBookers'
 import Profile from './pages/Profile'
+import Administration from './pages/Administration'
 import './css/variables.css'
 const App = () =>  {
   return (
@@ -34,8 +35,9 @@ const App = () =>  {
     <Route path='/Favoris' element={<Favoris />}/>
     <Route path='/BookingUser' element={<BookingUser />}/>
     <Route path='/MyProperties' element= {<Myproperties />}/>
-    <Route path='/MyBookers' element= {<MyBookers/>}/>
-    <Route path='/profile' element= {<Profile/>}/>
+    <Route path='/MyBookers' element= {<MyBookers />}/>
+    <Route path='/profile' element= {<Profile />}/>
+    <Route path='/Administration' element= {<Administration />}/>
   </Routes>
   <Footer/>
 </div>
